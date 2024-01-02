@@ -11,7 +11,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        ...Object.fromEntries(globSync('nested/**/*.html').map(file => [file.slice(0, file.length - (extname(file).length +6)),file])),
+        nested: resolve(__dirname, 'nested/index.html'),
       }
     },
   },
